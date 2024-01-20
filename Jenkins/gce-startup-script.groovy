@@ -54,7 +54,7 @@ sh 'cat ip.txt'
 
 stage('App health check') {
 steps {
-sh 'sleep 240'
+sh 'sleep 120'
 sh 'curl http://$(cat ip.txt)'
 
 }
