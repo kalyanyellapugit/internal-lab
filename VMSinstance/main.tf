@@ -17,5 +17,4 @@ resource "google_compute_instance" "vm-instance1" {
     network = "default"
 
      }
-  }
 }  
