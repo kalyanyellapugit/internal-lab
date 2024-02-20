@@ -13,7 +13,17 @@ resource "google_compute_instance" "vm-instance1" {
   zone         = "us-central1-a"
   tags = ["web-app"]
 
- network_interface {
-    network = "default"
+ boot_disk {
+    initialize_params {
+      image = "debian-10-buster-v20221102"
     }
-}  
+  }
+    
+  network_interface {
+    network = "default"
+
+    access_config {
+      // Ephemeral IP
+    }
+  }
+}
