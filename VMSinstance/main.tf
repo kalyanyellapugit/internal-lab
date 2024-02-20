@@ -15,6 +15,5 @@ resource "google_compute_instance" "vm-instance1" {
 
  network_interface {
     network = "default"
-
-     }
+    }
 }  
